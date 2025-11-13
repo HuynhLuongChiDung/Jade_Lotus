@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thực đơn - Jade Lotus</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background: #fffaf5;
+    }
+
+    /* Thanh menu chính */
+    .navbar {
+      background-color: #052b19;
+      overflow: visible;
+      display: flex;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      position: relative; /*để dropdown định vị theo thanh này */
+      z-index: 10; /* Giúp menu nằm trên cùng */
+    }
+
+    /* Các mục trong menu */
+    .navbar a, .dropdown .dropbtn {
+      font-size: 18px;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      background: none;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+      background-color: #052b19;
+      border-radius: 10px;
+    }
+
+    /* Nhóm dropdown */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Menu con (ẩn ban đầu) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 200px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      border-radius: 10px;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    /* Các mục trong menu con */
+    .dropdown-content a {
+      color: #333;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      transition: background 0.3s;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f2d0c4;
+    }
+
+    /* Hiện menu con khi hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    /* Hiệu ứng mượt */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="image/Logo-removebg-preview.png" alt="Jade Lotus Logo" class="logo-img">
+        <span>Jade Lotus</span>
+      </a>
+      <nav class="nav-links">
+        <ul>
+      <li><a href="index.html">Trang Chủ</a></li>
+       <!-- Mục Thực đơn có menu con -->
+    <div class="dropdown">
+      <button class="dropbtn">Thực đơn </button>
+      <div class="dropdown-content">
+        <a href="khaivi.html">Khai vị</a>
+        <a href="monchinh_A.html">Món chính Á</a>
+        <a href="monchinh_Au.html">Món chính Âu</a>
+        <a href="trangmieng.html">Tráng miệng</a>
+        <a href="nuocuong.html">Nước uống</a>
+        <a href="ruou.html">Rượu</a>
+      </div>
+    </div>
+      <li><a href="services.html">Dịch vụ</a></li>
+      <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </header>
+
+     <section class="page-header">
+        <h1>Thực đơn Jade Lotus</h1>
+        <p>Nhấn vào món ăn để xem chi tiết nguyên liệu & khẩu phần</p>
+     </section>
+
+
+     <div id="Rượu" class="menu-category">
+  <h2>Rượu</h2>
+  <div class="menu-grid">
+
+ <!-- Cocktail Cosmopolitan -->
+    <div class="menu-item" onclick="openModal('Cocktail Cosmopolitan', '290.000₫', 'image/Cocktail Cosmopolitan.jpg', 'Cocktail chua nhẹ, hương cranberry và cam, phong cách hiện đại.', 'Vodka, cranberry, triple sec, lime', '1 ly')">
+      <img src="image/Cocktail Cosmopolitan.jpg" alt="Cocktail Cosmopolitan">
+      <div class="menu-info">
+        <h3>Cocktail Cosmopolitan</h3><p>290.000₫</p>
+      </div>
+    </div>
+
+    <!-- cocktail margarita -->
+    <div class="menu-item" onclick="openModal('cocktail margarita', '280.000₫', 'image/cocktail margarita.jpg', 'Cocktail nổi tiếng Mexico, vị tequila mạnh và chua mặn hài hòa.', 'Tequila, triple sec, lime', '1 ly')">
+      <img src="image/cocktail margarita.jpg" alt="cocktail margarita">
+      <div class="menu-info">
+        <h3>cocktail margarita</h3><p>280.000₫</p>
+      </div>
+    </div>
+
+    <!-- cocktail martini -->
+    <div class="menu-item" onclick="openModal('cocktail martini', '320.000₫', 'image/cocktail martini.jpg', 'Cocktail kinh điển, hương vị mạnh và sang trọng.', 'Gin, dry vermouth, olive', '1 ly')">
+      <img src="image/cocktail martini.jpg" alt="cocktail martini">
+      <div class="menu-info">
+        <h3>cocktail martini</h3><p>320.000₫</p>
+      </div>
+    </div>
+
+    <!-- cocktail negroni -->
+    <div class="menu-item" onclick="openModal('cocktail negroni', '300.000₫', 'image/cocktail nergoni.jpg', 'Cocktail Ý cổ điển, vị đắng nhẹ và thơm mùi thảo mộc.', 'Gin, Campari, vermouth đỏ', '1 ly')">
+      <img src="image/cocktail nergoni.jpg" alt="cocktail negroni">
+      <div class="menu-info">
+        <h3>cocktail negroni</h3><p>300.000₫</p>
+      </div>
+    </div>
+
+    <!-- Cocktail Old Fashioned -->
+    <div class="menu-item" onclick="openModal('Cocktail Old Fashioned', '350.000₫', 'image/Cocktail Old Fashioned Cocktail.jpg', 'Whiskey cổ điển hòa quyện bitters và đường nâu, hương khói nhẹ.', 'Whiskey, sugar, bitters, cam', '1 ly')">
+      <img src="image/Cocktail Old Fashioned Cocktail.jpg" alt="Cocktail Old Fashioned">
+      <div class="menu-info">
+        <h3>Cocktail Old Fashioned</h3><p>350.000₫</p>
+      </div>
+    </div>
+
+    <!-- cocktail Pina Colada -->
+    <div class="menu-item" onclick="openModal('cocktail Pina Colada', '270.000₫', 'image/cocktail Pina Colada.jpg', 'Cocktail nhiệt đới béo nhẹ từ dừa và thơm mùi dứa.', 'Rum, nước cốt dừa, dứa', '1 ly')">
+      <img src="image/cocktail Pina Colada.jpg" alt="cocktail Pina Colada">
+      <div class="menu-info">
+        <h3>cocktail Pina Colada</h3><p>270.000₫</p>
+      </div>
+    </div>
+
+    <!-- mojito classic -->
+    <div class="menu-item" onclick="openModal('mojito classic', '750.000₫', 'image/mojito classic.jpg', 'Mojito truyền thống Cuba, vị bạc hà tươi mát.', 'Rum trắng, lime, mint, soda', '1 ly')">
+      <img src="image/mojito classic.jpg" alt="mojito classic">
+      <div class="menu-info">
+        <h3>mojito classic</h3><p>750.000₫</p>
+      </div>
+    </div>
+
+    <!-- Vang đỏ -->
+    <div class="menu-item" onclick="openModal('Vang đỏ', '9.000.000₫', 'image/Vang đỏ.jpg', 'Rượu vang đỏ thơm hương trái cây chín, vị đậm và êm.', 'Nho đỏ, vùng Pháp/Ý', '4–6 ly')">
+      <img src="image/Vang đỏ.jpg" alt="Vang đỏ">
+      <div class="menu-info">
+        <h3>Vang đỏ</h3><p>9.000.000₫</p>
+      </div>
+    </div>
+
+    <!-- Vang trắng -->
+    <div class="menu-item" onclick="openModal('Vang trắng', '7.000.000₫', 'image/Vang trắng.jpg', 'Vang trắng thanh mát, hương táo và hoa nhẹ.', 'Nho trắng, vùng Ý/Chile', '4–6 ly')">
+      <img src="image/Vang trắng.jpg" alt="Vang trắng">
+      <div class="menu-info">
+        <h3>Vang trắng</h3><p>7.000.000₫</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL CHI TIẾT -->
+  <div id="menuModal" class="menu-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img id="modalImg" src="" alt="">
+        <span class="close-btn" onclick="closeModal()">X</span>
+      </div>
+      <div class="modal-body">
+        <h2 id="modalTitle"></h2>
+        <div class="modal-price" id="modalPrice"></div>
+        <p id="modalDesc"></p>
+        <div class="info-grid">
+          <div class="info-box">
+            <strong>Nguyên liệu chính:</strong><br>
+            <span id="modalIngredients"></span>
+          </div>
+          <div class="info-box">
+            <strong>Khẩu phần khuyến nghị:</strong><br>
+            <span id="modalServing"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </section>
+  <script>
+    function openModal(title, price, img, desc, ingredients, serving) {
+      document.getElementById('modalTitle').innerText = title;
+      document.getElementById('modalPrice').innerText = price;
+      document.getElementById('modalImg').src = img;
+      document.getElementById('modalDesc').innerText = desc;
+      document.getElementById('modalIngredients').innerText = ingredients;
+      document.getElementById('modalServing').innerText = serving;
+      document.getElementById('menuModal').style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      document.getElementById('menuModal').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+    window.onclick = function(e) {
+      if (e.target === document.getElementById('menuModal')) closeModal();
+    }
+  </script>
+
+     <footer class="footer">
+  <div class="footer-container">
+    <!-- Cột 1: Logo & Giới thiệu -->
+    <div class="footer-col">
+      <h3>JADE LOTUS</h3>
+      <p>
+        Nhà hàng tiệc cưới cao cấp với không gian sang trọng, ẩm thực tinh tế và phong cách phục vụ đẳng cấp – 
+        nơi lưu giữ những khoảnh khắc đáng nhớ nhất của bạn.
+      </p>
+    </div>
+
+    <!-- Cột 2: Liên hệ -->
+    <div class="footer-col">
+      <h4>Jade Lotus</h4>
+      <p>📞 (028) 3896 1234 – 0909 123 456</p>
+      <p>✉️ Email: <a href="mailto:contact@jadelotus.vn">contact@jadelotus.vn</a></p>
+      <p>📍 36 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh</p>
+      <p>🕓 <strong>Giờ mở cửa:</strong> 8:00 – 22:00 (Thứ Hai – Chủ Nhật)</p>
+    </div>
+          <div class="footer-col">
+      <h4>Jade Lotus</h4>
+      <p>📞 (028) 3896 1234 – 0909 456 123</p>
+      <p>✉️ Email: <a href="mailto:contact@jadelotus.vn">contact@jadelotus.vn</a></p>
+      <p>📍 45 Phạm Văn Đồng, Thủ Đức, TP.HCM</p>
+      <p>🕓 <strong>Giờ mở cửa:</strong> 8:00 – 22:00 (Thứ Hai – Chủ Nhật)</p>
+    </div>
+  </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Jade Lotus – Nhà hàng tiệc cưới cao cấp TP.HCM</p>
+  </div>
+</footer>    
+</body>
+</html>

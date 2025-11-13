@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thực đơn - Jade Lotus</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background: #fffaf5;
+    }
+
+    /* Thanh menu chính */
+    .navbar {
+      background-color: #052b19;
+      overflow: visible;
+      display: flex;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      position: relative; /*để dropdown định vị theo thanh này */
+      z-index: 10; /* Giúp menu nằm trên cùng */
+    }
+
+    /* Các mục trong menu */
+    .navbar a, .dropdown .dropbtn {
+      font-size: 18px;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      background: none;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+      background-color: #052b19;
+      border-radius: 10px;
+    }
+
+    /* Nhóm dropdown */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Menu con (ẩn ban đầu) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 200px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      border-radius: 10px;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    /* Các mục trong menu con */
+    .dropdown-content a {
+      color: #333;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      transition: background 0.3s;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f2d0c4;
+    }
+
+    /* Hiện menu con khi hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    /* Hiệu ứng mượt */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="image/Logo-removebg-preview.png" alt="Jade Lotus Logo" class="logo-img">
+        <span>Jade Lotus</span>
+      </a>
+      <nav class="nav-links">
+        <ul>
+      <li><a href="index.html">Trang Chủ</a></li>
+       <!-- Mục Thực đơn có menu con -->
+    <div class="dropdown">
+      <button class="dropbtn">Thực đơn </button>
+      <div class="dropdown-content">
+        <a href="khaivi.html">Khai vị</a>
+        <a href="monchinh_A.html">Món chính Á</a>
+        <a href="trangmieng.html">Tráng miệng</a>
+        <a href="nuocuong.html">Nước uống</a>
+        <a href="ruou.html">Rượu</a>
+      </div>
+    </div>
+      <li><a href="services.html">Dịch vụ</a></li>
+      <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </header>
+
+     <section class="page-header">
+        <h1>Thực đơn Jade Lotus</h1>
+        <p>Nhấn vào món ăn để xem chi tiết nguyên liệu & khẩu phần</p>
+     </section>
+
+<!-- NƯỚC UỐNG -->
+<div class="menu-category">
+  <h2>Nước uống</h2>
+  <div class="menu-grid">
+
+    <!-- nước có ga perrier -->
+    <div class="menu-item" onclick="openModal('nước có ga perrier', '120.000 VNĐ', 'image/nước có ga perrier.jpg', 'Nước khoáng Pháp có ga, vị tinh khiết và sảng khoái.', 'Nước khoáng Perrier', '1 chai')">
+      <img src="image/nước có ga perrier.jpg" alt="nước có ga perrier">
+      <div class="menu-info">
+        <h3>nước có ga perrier</h3>
+        <p>120.000 VNĐ</p>
+      </div>
+    </div>
+
+    <!-- Matcha Latte -->
+    <div class="menu-item" onclick="openModal('Matcha Latte', '170.000 VNĐ', 'image/Matcha Latte.jpg', 'Matcha đậm vị hòa quyện sữa tươi, thơm béo và thanh mát.', 'Matcha, sữa tươi, syrup', '1 ly')">
+      <img src="image/Matcha Latte.jpg" alt="Matcha Latte">
+      <div class="menu-info">
+        <h3>Matcha Latte</h3>
+        <p>170.000 VNĐ</p>
+      </div>
+    </div>
+
+    <!-- nước có ga San Pellegrino -->
+    <div class="menu-item" onclick="openModal('nước có ga San Pellegrino', '120.000 VNĐ', 'image/nước có ga San Pellegrino.jpg', 'Nước khoáng Ý nhẹ ga, thanh tự nhiên, cao cấp.', 'San Pellegrino', '1 chai')">
+      <img src="image/nước có ga San Pellegrino.jpg" alt="nước có ga San Pellegrino">
+      <div class="menu-info">
+        <h3>nước có ga San Pellegrino</h3>
+        <p>120.000 VNĐ</p>
+      </div>
+    </div>
+
+    <!-- Nước ép cam -->
+    <div class="menu-item" onclick="openModal('Nước ép cam', '150.000 VNĐ', 'image/Nước ép cam.jpg', 'Cam tươi nguyên chất, vị chua ngọt tự nhiên.', 'Cam tươi, đá', '1 ly')">
+      <img src="image/Nước ép cam.jpg" alt="Nước ép cam">
+      <div class="menu-info">
+        <h3>Nước ép cam</h3>
+        <p>150.000 VNĐ</p>
+      </div>
+    </div>
+
+    <!-- Nước ép dưa hấu -->
+    <div class="menu-item" onclick="openModal('Nước ép dưa hấu', '150.000 VNĐ', 'image/Nước ép dưa hấu.jpg', 'Dưa hấu ép lạnh, vị ngọt dịu và giải nhiệt tốt.', 'Dưa hấu, đá', '1 ly')">
+      <img src="image/Nước ép dưa hấu.jpg" alt="Nước ép dưa hấu">
+      <div class="menu-info">
+        <h3>Nước ép dưa hấu</h3>
+        <p>150.000 VNĐ</p>
+      </div>
+    </div>
+
+    <!-- Nước nha đam hạt chia -->
+    <div class="menu-item" onclick="openModal('Nước nha đam hạt chia', '100.000 VNĐ', 'image/Nước nha đam hạt chia.jpg', 'Nha đam giòn nhẹ kết hợp hạt chia tốt cho sức khỏe.', 'Nha đam, hạt chia, đường phèn', '1 ly')">
+      <img src="image/Nước nha đam hạt chia.jpg" alt="Nước nha đam hạt chia">
+      <div class="menu-info">
+        <h3>Nước nha đam hạt chia</h3>
+        <p>100.000 VNĐ</p>
+      </div>
+    </div>
+
+    <!-- sinh tố bơ -->
+    <div class="menu-item" onclick="openModal('sinh tố bơ sữa hạnh nhân', '180.000 VNĐ', 'image/sinh tố bơ.jpg', 'Sinh tố bơ sánh mịn, béo thơm tự nhiên.', 'Bơ chín, sữa đặc, sữa hạt hạnh nhân', '1 ly')">
+      <img src="image/sinh tố bơ.jpg" alt="sinh tố bơ">
+      <div class="menu-info">
+        <h3>sinh tố bơ</h3>
+        <p>180.000 VNĐ</p>
+      </div>
+    </div>
+
+    <!-- Trà đào cam xả -->
+    <div class="menu-item" onclick="openModal('Trà đào cam xả', '160.000 VNĐ', 'image/Trà đào cam xả.jpg', 'Trà đào thanh mát kết hợp cam tươi và sả thơm nhẹ.', 'Trà đen, đào, cam, sả', '1 ly')">
+      <img src="image/Trà đào cam xả.jpg" alt="Trà đào cam xả">
+      <div class="menu-info">
+        <h3>Trà đào cam xả</h3>
+        <p>160.000 VNĐ</p>
+      </div>
+    </div>
+
+    <!-- Trà hoa lài -->
+    <div class="menu-item" onclick="openModal('Trà hoa lài', '140.000 VNĐ', 'image/Trà hoa lài.jpg', 'Trà hoa lài thơm dịu, vị thanh và dễ uống.', 'Trà hoa lài, nước nóng, đá', '1 ly')">
+      <img src="image/Trà hoa lài.jpg" alt="Trà hoa lài">
+      <div class="menu-info">
+        <h3>Trà hoa lài</h3>
+        <p>140.000 VNĐ</p>
+      </div>
+    </div>
+
+    <!-- Yogurt việt quất -->
+    <div class="menu-item" onclick="openModal('Yogurt việt quất', '160.000 VNĐ', 'image/Yogurt việt quất.jpg', 'Yogurt lạnh sánh mịn kết hợp việt quất chua ngọt.', 'Sữa chua, việt quất, đá xay', '1 ly')">
+      <img src="image/Yogurt việt quất.jpg" alt="Yogurt việt quất">
+      <div class="menu-info">
+        <h3>Yogurt việt quất</h3>
+        <p>160.000 VNĐ</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- MODAL CHI TIẾT -->
+  <div id="menuModal" class="menu-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img id="modalImg" src="" alt="">
+        <span class="close-btn" onclick="closeModal()">X</span>
+      </div>
+      <div class="modal-body">
+        <h2 id="modalTitle"></h2>
+        <div class="modal-price" id="modalPrice"></div>
+        <p id="modalDesc"></p>
+        <div class="info-grid">
+          <div class="info-box">
+            <strong>Nguyên liệu chính:</strong><br>
+            <span id="modalIngredients"></span>
+          </div>
+          <div class="info-box">
+            <strong>Khẩu phần khuyến nghị:</strong><br>
+            <span id="modalServing"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+     <footer class="footer">
+  <div class="footer-container">
+    <!-- Cột 1: Logo & Giới thiệu -->
+    <div class="footer-col">
+      <h3>JADE LOTUS</h3>
+      <p>
+        Nhà hàng tiệc cưới cao cấp với không gian sang trọng, ẩm thực tinh tế và phong cách phục vụ đẳng cấp – 
+        nơi lưu giữ những khoảnh khắc đáng nhớ nhất của bạn.
+      </p>
+    </div>
+
+    <!-- Cột 2: Liên hệ -->
+    <div class="footer-col">
+      <h4>Jade Lotus</h4>
+      <p>📞 (028) 3896 1234 – 0909 123 456</p>
+      <p>✉️ Email: <a href="mailto:contact@jadelotus.vn">contact@jadelotus.vn</a></p>
+      <p>📍 36 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh</p>
+      <p>🕓 <strong>Giờ mở cửa:</strong> 8:00 – 22:00 (Thứ Hai – Chủ Nhật)</p>
+    </div>
+          <div class="footer-col">
+      <h4>Jade Lotus</h4>
+      <p>📞 (028) 3896 1234 – 0909 456 123</p>
+      <p>✉️ Email: <a href="mailto:contact@jadelotus.vn">contact@jadelotus.vn</a></p>
+      <p>📍 45 Phạm Văn Đồng, Thủ Đức, TP.HCM</p>
+      <p>🕓 <strong>Giờ mở cửa:</strong> 8:00 – 22:00 (Thứ Hai – Chủ Nhật)</p>
+    </div>
+  </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Jade Lotus – Nhà hàng tiệc cưới cao cấp TP.HCM</p>
+  </div>
+</footer>
+
+  <script>
+    function openModal(title, price, img, desc, ingredients, serving) {
+      document.getElementById('modalTitle').innerText = title;
+      document.getElementById('modalPrice').innerText = price;
+      document.getElementById('modalImg').src = img;
+      document.getElementById('modalDesc').innerText = desc;
+      document.getElementById('modalIngredients').innerText = ingredients;
+      document.getElementById('modalServing').innerText = serving;
+      document.getElementById('menuModal').style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      document.getElementById('menuModal').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+    window.onclick = function(e) {
+      if (e.target === document.getElementById('menuModal')) closeModal();
+    }
+  </script>
+</body>
+</html>

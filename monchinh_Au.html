@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thực đơn - Jade Lotus</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background: #fffaf5;
+    }
+
+    /* Thanh menu chính */
+    .navbar {
+      background-color: #052b19;
+      overflow: visible;
+      display: flex;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      position: relative; /*để dropdown định vị theo thanh này */
+      z-index: 10; /* Giúp menu nằm trên cùng */
+    }
+
+    /* Các mục trong menu */
+    .navbar a, .dropdown .dropbtn {
+      font-size: 18px;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      background: none;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+      background-color: #052b19;
+      border-radius: 10px;
+    }
+
+    /* Nhóm dropdown */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Menu con (ẩn ban đầu) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 200px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      border-radius: 10px;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    /* Các mục trong menu con */
+    .dropdown-content a {
+      color: #333;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      transition: background 0.3s;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f2d0c4;
+    }
+
+    /* Hiện menu con khi hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    /* Hiệu ứng mượt */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="image/Logo-removebg-preview.png" alt="Jade Lotus Logo" class="logo-img">
+        <span>Jade Lotus</span>
+      </a>
+      <nav class="nav-links">
+        <ul>
+      <li><a href="index.html">Trang Chủ</a></li>
+       <!-- Mục Thực đơn có menu con -->
+    <div class="dropdown">
+      <button class="dropbtn">Thực đơn </button>
+      <div class="dropdown-content">
+        <a href="khaivi.html">Khai vị</a>
+        <a href="monchinh_A.html">Món chính Á</a>
+        <a href="monchinh_Au.html">Món chính Âu</a>
+        <a href="trangmieng.html">Tráng miệng</a>
+        <a href="nuocuong.html">Nước uống</a>
+        <a href="ruou.html">Rượu</a>
+      </div>
+    </div>
+      <li><a href="services.html">Dịch vụ</a></li>
+      <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </header>
+
+     <section class="page-header">
+        <h1>Thực đơn Jade Lotus</h1>
+        <p>Nhấn vào món ăn để xem chi tiết nguyên liệu & khẩu phần</p>
+     </section>
+
+
+     <div id="món chính Âu" class="menu-category">
+  <h2>Món Chính Âu</h2>
+  <div class="menu-grid">
+
+    <!-- Beef Wellington -->
+    <div class="menu-item" onclick="openModal('Beef Wellington', '900.000₫', 'image/Beef Wellington.jpg', 'Thịt bò nướng bọc pate gan và lớp pastry vàng giòn.', 'Thịt bò, pate, nấm, bột pastry', '1 phần')">
+      <img src="image/Beef Wellington.jpg" alt="Beef Wellington">
+      <div class="menu-info">
+        <h3>Beef Wellington</h3><p>900.000₫</p>
+      </div>
+    </div>
+
+    <!-- Bò sốt vang -->
+    <div class="menu-item" onclick="openModal('Bò sốt vang', '750.000₫', 'image/Bò sốt vang.jpg', 'Thịt bò hầm mềm trong sốt vang đỏ đậm vị.', 'Thịt bò, rượu vang, rau củ', '1 phần')">
+      <img src="image/Bò sốt vang.jpg" alt="Bò sốt vang">
+      <div class="menu-info">
+        <h3>Bò sốt vang</h3><p>750.000₫</p>
+      </div>
+    </div>
+
+    <!-- Cá hồi nướng sốt chanh dây -->
+    <div class="menu-item" onclick="openModal('Cá hồi nướng sốt chanh dây', '350.000₫', 'image/Cá hồi nướng sôt chanh dây.jpg', 'Cá hồi nướng da giòn, rưới sốt chanh dây chua ngọt.', 'Cá hồi, chanh dây, bơ', '1 phần')">
+      <img src="image/Cá hồi nướng sôt chanh dây.jpg" alt="Cá hồi nướng sốt chanh dây">
+      <div class="menu-info">
+        <h3>Cá hồi nướng sốt chanh dây</h3><p>350.000₫</p>
+      </div>
+    </div>
+
+    <!-- Cá tuyết nướng bơ chanh -->
+    <div class="menu-item" onclick="openModal('Cá tuyết nướng bơ chanh', '1.400.000₫', 'image/Cá tuyết nướng bơ chanh.jpg', 'Cá tuyết nướng mềm, thơm bơ chanh tươi mát.', 'Cá tuyết, bơ, chanh', '1 phần')">
+      <img src="image/Cá tuyết nướng bơ chanh.jpg" alt="Cá tuyết nướng bơ chanh">
+      <div class="menu-info">
+        <h3>Cá tuyết nướng bơ chanh</h3><p>1.400.000₫</p>
+      </div>
+    </div>
+
+    <!-- Carbonara -->
+    <div class="menu-item" onclick="openModal('Carbonara', '450.000₫', 'image/Carbonara.jpg', 'Mì Ý sốt kem trứng béo ngậy, thịt xông khói thơm lừng.', 'Pasta, trứng, bacon, phô mai', '1 phần')">
+      <img src="image/Carbonara.jpg" alt="Carbonara">
+      <div class="menu-info">
+        <h3>Carbonara</h3><p>450.000₫</p>
+      </div>
+    </div>
+
+    <!-- Gà nướng thảo mộc -->
+    <div class="menu-item" onclick="openModal('Gà nướng thảo mộc', '500.000₫', 'image/Gà nướng thảo mộc.jpg', 'Ức gà nướng thơm phức với các loại thảo mộc Địa Trung Hải.', 'Gà, rosemary, thyme, bơ', '1 phần')">
+      <img src="image/Gà nướng thảo mộc.jpg" alt="Gà nướng thảo mộc">
+      <div class="menu-info">
+        <h3>Gà nướng thảo mộc</h3><p>500.000₫</p>
+      </div>
+    </div>
+
+    <!-- Risotto hải sản -->
+    <div class="menu-item" onclick="openModal('Risotto hải sản', '550.000₫', 'image/Risotto hải sản.jpg', 'Cơm Ý risotto béo mịn hòa cùng tôm mực tươi ngon.', 'Gạo Ý, tôm, mực, bơ, phô mai', '1 phần')">
+      <img src="image/Risotto hải sản.jpg" alt="Risotto hải sản">
+      <div class="menu-info">
+        <h3>Risotto hải sản</h3><p>550.000₫</p>
+      </div>
+    </div>
+
+    <!-- Spaghetti -->
+    <div class="menu-item" onclick="openModal('Spaghetti', '450.000₫', 'image/Spaghetti.jpg', 'Mì Ý sợi dai hòa cùng sốt đặc trưng đậm đà.', 'Pasta, cà chua, thịt xay', '1 phần')">
+      <img src="image/Spaghetti.jpg" alt="Spaghetti">
+      <div class="menu-info">
+        <h3>Spaghetti</h3><p>450.000₫</p>
+      </div>
+    </div>
+
+    <!-- Tôm hùm nướng phô mai -->
+    <div class="menu-item" onclick="openModal('Tôm hùm nướng phô mai', '1.600.000₫', 'image/Tôm hùm nướng phô mai.jpg', 'Tôm hùm nướng phủ phô mai béo ngậy, thơm hấp dẫn.', 'Tôm hùm, phô mai mozzarella', '1 phần')">
+      <img src="image/Tôm hùm nướng phô mai.jpg" alt="Tôm hùm nướng phô mai">
+      <div class="menu-info">
+        <h3>Tôm hùm nướng phô mai</h3><p>1.600.000₫</p>
+      </div>
+    </div>
+
+    <!-- Ức gà áp chảo sốt cam -->
+    <div class="menu-item" onclick="openModal('Ức gà áp chảo sốt cam', '450.000₫', 'image/ỨC gà áp chảo sôt cam.jpg', 'Ức gà áp chảo vàng giòn, sốt cam chua ngọt hấp dẫn.', 'Ức gà, cam, bơ, tỏi', '1 phần')">
+      <img src="image/ỨC gà áp chảo sôt cam.jpg" alt="Ức gà áp chảo sốt cam">
+      <div class="menu-info">
+        <h3>Ức gà áp chảo sốt cam</h3><p>450.000₫</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL CHI TIẾT -->
+  <div id="menuModal" class="menu-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img id="modalImg" src="" alt="">
+        <span class="close-btn" onclick="closeModal()">X</span>
+      </div>
+      <div class="modal-body">
+        <h2 id="modalTitle"></h2>
+        <div class="modal-price" id="modalPrice"></div>
+        <p id="modalDesc"></p>
+        <div class="info-grid">
+          <div class="info-box">
+            <strong>Nguyên liệu chính:</strong><br>
+            <span id="modalIngredients"></span>
+          </div>
+          <div class="info-box">
+            <strong>Khẩu phần khuyến nghị:</strong><br>
+            <span id="modalServing"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </section>
+  <script>
+    function openModal(title, price, img, desc, ingredients, serving) {
+      document.getElementById('modalTitle').innerText = title;
+      document.getElementById('modalPrice').innerText = price;
+      document.getElementById('modalImg').src = img;
+      document.getElementById('modalDesc').innerText = desc;
+      document.getElementById('modalIngredients').innerText = ingredients;
+      document.getElementById('modalServing').innerText = serving;
+      document.getElementById('menuModal').style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      document.getElementById('menuModal').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+    window.onclick = function(e) {
+      if (e.target === document.getElementById('menuModal')) closeModal();
+    }
+  </script>
+
+     <footer class="footer">
+  <div class="footer-container">
+    <!-- Cột 1: Logo & Giới thiệu -->
+    <div class="footer-col">
+      <h3>JADE LOTUS</h3>
+      <p>
+        Nhà hàng tiệc cưới cao cấp với không gian sang trọng, ẩm thực tinh tế và phong cách phục vụ đẳng cấp – 
+        nơi lưu giữ những khoảnh khắc đáng nhớ nhất của bạn.
+      </p>
+    </div>
+
+    <!-- Cột 2: Liên hệ -->
+    <div class="footer-col">
+      <h4>Jade Lotus</h4>
+      <p>📞 (028) 3896 1234 – 0909 123 456</p>
+      <p>✉️ Email: <a href="mailto:contact@jadelotus.vn">contact@jadelotus.vn</a></p>
+      <p>📍 36 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh</p>
+      <p>🕓 <strong>Giờ mở cửa:</strong> 8:00 – 22:00 (Thứ Hai – Chủ Nhật)</p>
+    </div>
+          <div class="footer-col">
+      <h4>Jade Lotus</h4>
+      <p>📞 (028) 3896 1234 – 0909 456 123</p>
+      <p>✉️ Email: <a href="mailto:contact@jadelotus.vn">contact@jadelotus.vn</a></p>
+      <p>📍 45 Phạm Văn Đồng, Thủ Đức, TP.HCM</p>
+      <p>🕓 <strong>Giờ mở cửa:</strong> 8:00 – 22:00 (Thứ Hai – Chủ Nhật)</p>
+    </div>
+  </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Jade Lotus – Nhà hàng tiệc cưới cao cấp TP.HCM</p>
+  </div>
+</footer>    
+</body>
+</html>

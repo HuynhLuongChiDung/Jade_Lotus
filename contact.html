@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đặt tiệc Jade Lotus - 28 món đầy đủ</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* FIX HEADER LẤN + 2 BẢN ĐỒ */
+    body { padding-top: 190px !important; }
+    header { position: fixed; top: 0; left: 0; width: 100%; background: #052b19; z-index: 1000; padding: 15px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.3); text-align:center; }
+    
+    /* FORM SIÊU ĐẸP */
+    .booking-pro { background: linear-gradient(135deg, #052b19, #0a3d2b); padding: 80px 20px; color: white; }
+    .form-container { max-width: 1400px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 50px; justify-content: center; }
+    .form-left { flex: 1; min-width: 380px; }
+    .form-right { flex: 1.5; min-width: 450px; background: white; color: #333; padding: 40px; border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.25); }
+    label { display: block; margin: 18px 0 10px; font-weight: bold; color: #052b19; font-size: 17px; }
+    input, select { width: 100%; padding: 14px; border: 2px solid #e0e0e0; border-radius: 12px; font-size: 16px; transition: .3s; }
+    input:focus, select:focus { border-color: #FFC107; outline: none; box-shadow: 0 0 0 4px rgba(255,193,7,0.2); }
+
+    /* TAB */
+    .menu-tab { text-align: center; margin: 25px 0; }
+    .menu-tab button { background:#052b19; color:white; padding:12px 28px; border:none; border-radius:50px; margin:5px; cursor:pointer; font-weight:bold; font-size:15px; transition:.3s; }
+    .menu-tab button.active { background:#FFC107 !important; color:#052b19 !important; }
+
+    /* MÓN ĂN */
+    .dish-item { background:#f8f9f4; border-radius:16px; padding:18px; margin:12px 0; display:flex; align-items:center; gap:15px; box-shadow:0 4px 15px rgba(0,0,0,0.08); transition:.3s; }
+    .dish-item:hover { transform:translateY(-3px); box-shadow:0 8px 25px rgba(0,0,0,0.15); }
+    .dish-img { width:80px; height:80px; border-radius:12px; object-fit:cover; border:3px solid #FFC107; }
+    .dish-info { flex:1; }
+    .dish-name { font-weight:bold; color:#052b19; font-size:18px; }
+    .dish-price { color:#e67e22; font-size:16px; }
+    .quantity-controls { display:flex; align-items:center; gap:10px; border-radius:50px; padding:5px 12px; box-shadow:inset 0 2px 8px rgba(0,0,0,0.1); }
+    .quantity-controls button { width:36px; height:36px; border:none; background:#052b19; color:white; border-radius:50%; font-size:20px; cursor:pointer; }
+    .quantity-controls span { min-width:40px; text-align:center; font-weight:bold; font-size:18px; }
+
+    .total-section { background:linear-gradient(135deg,#052b19,#0a3d2b); color:white; padding:30px; border-radius:20px; text-align:center; margin:35px 0; }
+    .total-price { font-size:38px; font-weight:bold; color:#FFC107; margin:10px 0; }
+    .deposit { font-size:24px; color:#ff7675; }
+    .btn-submit { background:#FFC107; color:#052b19; font-size:22px; padding:20px; border:none; border-radius:50px; cursor:pointer; width:100%; font-weight:bold; transition:.4s; }
+    .btn-submit:hover { background:#052b19; color:#FFC107; transform:scale(1.03); }
+
+    /* 2 BẢN ĐỒ */
+    .maps-row { display:flex; flex-wrap:wrap; gap:40px; justify-content:center; margin-top:80px; padding:0 20px; }
+    .map-wrapper { flex:1; min-width:300px; max-width:600px; background:white; border-radius:20px; overflow:hidden; box-shadow:0 12px 40px rgba(0,0,0,0.18); }
+    .map-wrapper iframe { width:100%; height:350px; border:0; }
+    .map-info { padding:25px; background:#052b19; color:white; text-align:center; }
+    .map-info h3 { color:#FFC107; font-size:24px; margin-bottom:8px; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="navbar">
+      <a href="index.html" class="logo">
+        <img src="image/Logo-removebg-preview.png" alt="Jade Lotus" class="logo-img">
+        <span>Jade Lotus</span>
+      </a>
+      <div class="nav-links">
+        <ul>
+      <li><a href="index.html">Trang Chủ</a></li>
+          <div class="dropdown">
+      <button class="dropbtn">Thực đơn </button>
+      <div class="dropdown-content">
+        <a href="khaivi.html">Khai vị</a>
+        <a href="monchinh_A.html">Món chính Á</a>
+        <a href="monchinh_Au.html">Món chính Âu</a>
+        <a href="trangmieng.html">Tráng miệng</a>
+        <a href="nuocuong.html">Nước Uống</a>
+        <a href="ruou.html">Rượu</a>
+      </div>
+    </div>
+      <li><a href="services.html">Dịch vụ</a></li>
+      <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-header" style="background:#052b19;color:#F8F9F4;text-align:center;padding:60px 20px;">
+    <h1>Đặt tiệc Jade Lotus</h1>
+    <p style="font-size:20px;">28 món chính thức – Chọn thoải mái – Tính tiền tự động</p>
+  </section>
+
+  <section class="booking-pro">
+    <div class="form-container">
+      <!-- TRÁI -->
+      <div class="form-left">
+        <h2 style="font-size:42px;">Tiệc VIP<br><span style="color:#FFC107;">4.9tr/bàn</span></h2>
+        <p style="font-size:19px;line-height:1.9;margin:30px 0">
+          • Miễn phí backdrop 15 triệu<br>
+          • MC + ban nhạc sống 12 triệu<br>
+          • Trang trí hoa tươi 8 triệu<br>
+          • Đặt cọc 20% giữ ngày ngay
+        </p>
+        <div style="background:white;color:#052b19;padding:30px;border-radius:20px;">
+          <p>Hotline: <strong style="font-size:24px">0909 123 456</strong></p>
+          <p>Zalo: <a href="https://zalo.me/0909123456" style="color:#052b19;text-decoration:underline">Chat ngay</a></p>
+        </div>
+      </div>
+
+      <!-- PHẢI -->
+      <div class="form-right">
+        <form id="bookingForm">
+          <label>Họ & tên *</label>
+          <input type="text" required>
+
+          <label>Số điện thoại (Zalo) *</label>
+          <input type="tel" required>
+
+          <label>Số lượng bàn *</label>
+          <select id="tableCount" onchange="calcPrice()" required>
+            <option value="">-- Chọn số bàn --</option>
+            <option value="1">1 bàn (10 khách)</option>
+            <option value="5">5 bàn (50 khách)</option>
+            <option value="10">10 bàn (100 khách)</option>
+            <option value="15">15 bàn (150 khách)</option>
+            <option value="20">20 bàn (200 khách)</option>
+          </select>
+
+          <div class="menu-tab">
+            <button type="button" class="active" onclick="openTab(event,'KhaiVi')">Khai vị</button>
+            <button type="button" onclick="openTab(event,'MonChinh')">Món chính</button>
+            <button type="button" onclick="openTab(event,'TrangMieng')">Tráng miệng</button>
+            <button type="button" onclick="openTab(event,'Nuoc')">Nước & Rượu</button>
+          </div>
+
+          <!-- === KHAI VỊ (8 món) === -->
+          <div id="KhaiVi" class="tabcontent" style="display:block;">
+            <div class="dish-item"><img src="image/bánh mì bơ tỏi.jpg" class="dish-img"><div class="dish-info"><div class="dish-name">Bánh mì bơ tỏi</div><div class="dish-price">100.000đ</div></div><div class="quantity-controls"><button type="button" onclick="updateQty(this,-1)">-</button><span class="qty">0</span><button type="button" onclick="updateQty(this,1)">+</button></div></div>
+            <div class="dish-item"><img src="image/gỏi ngó sen.jpg" class="dish-img"><div class="dish-info"><div class="dish-name">Gỏi ngó sen</div><div class="dish-price">150.000đ</div></div><div class="quantity-controls"><button type="button" onclick="updateQty(this,-1)">-</button><span class="qty">0</span><button type="button" onclick="updateQty(this,1)">+</button></div></div>
+            <div class="dish-item"><img src="image/súp hải sản.jpg" class="dish-img"><div class="dish-info"><div class="dish-name">Súp hải sản</div><div class="dish-price">250.000đ</div></div><div class="quantity-controls"><button type="button" onclick="updateQty(this,-1)">-</button><span class="qty">0</span><button type="button" onclick="updateQty(this,1)">+</button></div></div>
+            <div class="dish-item"><img src="image/tôm chiên xù.jpg" class="dish-img"><div class="dish-info"><div class="dish-name">Tôm chiên xù</div><div class="dish-price">200.000đ</div></div><div class="quantity-controls"><button type="button" onclick="updateQty(this,-1)">-</button><span class="qty">0</span><button type="button" onclick="updateQty(this,1)">+</button></div></div>
+          </div>
+
+          <!-- === MÓN CHÍNH (10 món) === -->
+          <div id="MonChinh" class="tabcontent">
+            <div class="dish-item"><img src="image/tôm hùm đút lò.jpg" class="dish-img"><div class="dish-info"><div class="dish-name">Tôm hùm đút lò</div><div class="dish-price">400.000đ</div></div><div class="quantity-controls"><button type="button" onclick="updateQty(this,-1)">-</button><span class="qty">0</span><button type="button" onclick="updateQty(this,1)">+</button></div></div>
+            <div class="dish-item"><img src="image/bomy.jpeg" class="dish-img"><div class="dish-info"><div class="dish-name">Bò Mỹ nướng</div><div class="dish-price">320.000đ</div></div><div class="quantity-controls"><button type="button" onclick="updateQty(this,-1)">-</button><span class="qty">0</span><button type="button" onclick="updateQty(this,1)">+</button></div></div>
+            <div class="dish-item"><img src="image/camu.jpeg" class="dish-img"><div class="dish-info"><div class="dish-name">Cá mú hấp Hồng Kông</div><div class="dish-price">500.000đ</div></div><div class="quantity-controls"><button type="button" onclick="updateQty(this,-1)">-</button><span class="qty">0</span><button type="button" onclick="updateQty(this,1)">+</button></div></div>
+            <div class="dish-item"><img src="image/heoquay.jpeg" class="dish-img"><div class="dish-info"><div class="dish-name">Heo quay giòn bì</div><div class="dish-price">800.000đ</div></div><div class="quantity-controls"><button type="button" onclick="updateQty(this,-1)">-</button><span class="qty">0</span><button type="button" onclick="updateQty(this,1)">+</button></div></div>
+            <div class="dish-item"><img src="image/gahap.jpeg" class="dish-img"><div class="dish-info"><div class="dish-name">Gà ta hấp lá chanh</div><div class="dish-price">900.000đ</div></div><div class="quantity-controls"><button type="button" onclick="updateQty(this,-1)">-</button><span class="qty">0</span><button type="button" onclick="updateQty(this,1)">+</button></div></div>
+            <div class="dish-item"><img src="image/com_luon.jpg" class="dish-img"><div class="dish-info"><div class="dish-name">Cơm Lươn</div><div class="dish-price">300.000đ</div></div><div class="quantity-controls"><button type="button" onclick="updateQty(this,-1)">-</button><span class="qty">0</span><button type="button" onclick="updateQty(this,1)">+</button></div></div>
+            <div class="dish-item"><img src="image/kingcrab.jpeg" class="dish-img"><div class="dish-info"><div class="dish-name">Cua hoàng đế</div><div class="dish-price">3.500.000đ</div></div><div class="quantity-controls"><button type="button" onclick="updateQty(this,-1)">-</button><span class="qty">0</span><button type="button" onclick="updateQty(this,1)">+</button></div></div>
+            <div class="dish-item"><img src="image/ức vịt sốt cam.jpg" class="dish-img"><div class="dish-info"><div class="dish-name">Ức vịt sốt cam</div><div class="dish-price">200.000đ</div></div><div class="quantity-controls"><button type="button" onclick="updateQty(this,-1)">-</button><span class="qty">0</span><button type="button" onclick="updateQty(this,1)">+</button></div></div>
+            <div class="dish-item"><img src="image/mì ý.jpg" class="dish-img"><div class="dish-info"><div class="dish-name">Mỳ Ý</div><div class="dish-price">170.000đ</div></div><div class="quantity-controls"><button type="button" onclick="updateQty(this,-1)">-</button><span class="qty">0</span><button type="button" onclick="updateQty(this,1)">+</button></div></div>
+          </div>
+
+          <!-- === TRÁNG MIỆNG (6 món) === -->
+          <div id="TrangMieng" class="tabcontent">
+            <div class="dish-item"><img src="image/flan.jpg" class="dish-img"><div class="dish-info"><div class="dish-name">Bánh flan</div><div class="dish-price">50.000đ</div></div><div class="quantity-controls"><button type="button" onclick="updateQty(this,-1)">-</button><span class="qty">0</span><button type="button" onclick="updateQty(this,1)">+</button></div></div>
+            <div class="dish-item"><img src="image/chè hạt sen long nhãn.jpg" class="dish-img"><div class="dish-info"><div class="dish-name">Chè sen long nhãn</div><div class="dish-price">50.000đ</div></div><div class="quantity-controls"><button type="button" onclick="updateQty(this,-1)">-</button><span class="qty">0</span><button type="button" onclick="updateQty(this,1)">+</button></div></div>
+            <div class="dish-item"><img src="image/bánh mouse xoài.jpg" class="dish-img"><div class="dish-info"><div class="dish-name">Mousse xoài</div><div class="dish-price">70.000đ</div></div><div class="quantity-controls"><button type="button" onclick="updateQty(this,-1)">-</button><span class="qty">0</span><button type="button" onclick="updateQty(this,1)">+</button></div></div>
+            <div class="dish-item"><img src="image/tiramisu socola.jpg" class="dish-img"><div class="dish-info"><div class="dish-name">Tiramisu</div><div class="dish-price">100.000đ</div></div><div class="quantity-controls"><button type="button" onclick="updateQty(this,-1)">-</button><span class="qty">0</span><button type="button" onclick="updateQty(this,1)">+</button></div></div>
+            <div class="dish-item"><img src="image/yogurt.jpeg" class="dish-img"><div class="dish-info"><div class="dish-name">Sữa chua trái cây</div><div class="dish-price">35.000đ</div></div><div class="quantity-controls"><button type="button" onclick="updateQty(this,-1)">-</button><span class="qty">0</span><button type="button" onclick="updateQty(this,1)">+</button></div></div>
+          </div>
+
+          <!-- === NƯỚC & RƯỢU (4 món) === -->
+          <div id="Nuoc" class="tabcontent">
+            <div class="dish-item"><img src="image/rượu vang ý.jpg" class="dish-img"><div class="dish-info"><div class="dish-name">Rượu vang đỏ Ý</div><div class="dish-price">1.500.000đ</div></div><div class="quantity-controls"><button type="button" onclick="updateQty(this,-1)">-</button><span class="qty">0</span><button type="button" onclick="updateQty(this,1)">+</button></div></div>
+            <div class="dish-item"><img src="image/sinh tố bơ.jpg" class="dish-img"><div class="dish-info"><div class="dish-name">Sinh tố bơ</div><div class="dish-price">50.000</div></div><div class="quantity-controls"><button type="button" onclick="updateQty(this,-1)">-</button><span class="qty">0</span><button type="button" onclick="updateQty(this,1)">+</button></div></div>
+            <div class="dish-item"><img src="image/cocktail paper plane.jpg" class="dish-img"><div class="dish-info"><div class="dish-name">Cocktail Paper Plane</div><div class="dish-price">300.000đ</div></div><div class="quantity-controls"><button type="button" onclick="updateQty(this,-1)">-</button><span class="qty">0</span><button type="button" onclick="updateQty(this,1)">+</button></div></div>
+            <div class="dish-item"><img src="image/nước ép cam.jpg" class="dish-img"><div class="dish-info"><div class="dish-name">Nước cam</div><div class="dish-price">50.000đ</div></div><div class="quantity-controls"><button type="button" onclick="updateQty(this,-1)">-</button><span class="qty">0</span><button type="button" onclick="updateQty(this,1)">+</button></div></div>
+          </div>
+
+          <label>Ngày tổ chức *</label>
+          <input type="date" required>
+
+          <label>Giờ đến *</label>
+          <select required>
+            <option>11:00 - 11:30</option>
+            <option>17:00 - 17:30</option>
+            <option>18:00 - 18:30</option>
+            <option>19:00 - 19:30</option>
+          </select>
+
+          <div class="total-section">
+            <div class="total-price" id="totalPrice">Tổng tiền: 0 VNĐ</div>
+            <div class="deposit">Đặt cọc 20%: <span id="depositAmount">0 VNĐ</span></div>
+          </div>
+
+          <button type="submit" class="btn-submit">GỬI YÊU CẦU – GIỮ NGÀY NGAY</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- 2 BẢN ĐỒ -->
+    <div class="maps-row">
+      <div class="map-wrapper">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1321.8286940515684!2d106.70331259148965!3d10.773781414088683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f9948736935%3A0xa33e471381cd4e93!2zMjIsIDM2IE5ndXnDqsyDbiBIdcOqzKMsIELhur9uIE5naMOpLCBRdeG6rW4gMSwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1759976071046!5m2!1svi!2s" allowfullscreen="" loading="lazy"></iframe>
+        <div class="map-info"><h3>Jade Lotus Trung tâm</h3><p>36 Nguyễn Huệ, Quận 1, TP.HCM</p></div>
+      </div>
+      <div class="map-wrapper">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d822.5878583850665!2d106.73419139044267!3d10.838172591435985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527ce4b3ab7dd%3A0x5d6b8baaee5776db!2zNDUgxJAuIFBo4bqhbSBWxINuIMSQ4buTbmcsIEhp4buHcCBCw6xuaCBDaMOhbmgsIFRo4bunIMSQ4bupYywgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1759977637796!5m2!1svi!2s" allowfullscreen="" loading="lazy"></iframe>
+        <div class="map-info"><h3>Jade Lotus Phạm Văn Đồng</h3><p>45 Phạm Văn Đồng, Thủ Đức, TP.HCM</p></div>
+      </div>
+    </div>
+  </section>
+
+ <footer class="footer">
+  <div class="footer-container">
+    <!-- Cột 1: Logo & Giới thiệu -->
+    <div class="footer-col">
+      <h3>JADE LOTUS</h3>
+      <p>
+        Nhà hàng tiệc cưới cao cấp với không gian sang trọng, ẩm thực tinh tế và phong cách phục vụ đẳng cấp – 
+        nơi lưu giữ những khoảnh khắc đáng nhớ nhất của bạn.
+      </p>
+    </div>
+
+    <!-- Cột 2: Liên hệ -->
+    <div class="footer-col">
+      <h4>Jade Lotus</h4>
+      <p>📞 (028) 3896 1234 – 0909 123 456</p>
+      <p>✉️ Email: <a href="mailto:contact@jadelotus.vn">contact@jadelotus.vn</a></p>
+      <p>📍 36 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh</p>
+      <p>🕓 <strong>Giờ mở cửa:</strong> 8:00 – 22:00 (Thứ Hai – Chủ Nhật)</p>
+    </div>
+          <div class="footer-col">
+      <h4>Jade Lotus</h4>
+      <p>📞 (028) 3896 1234 – 0909 456 123</p>
+      <p>✉️ Email: <a href="mailto:contact@jadelotus.vn">contact@jadelotus.vn</a></p>
+      <p>📍 45 Phạm Văn Đồng, Thủ Đức, TP.HCM</p>
+      <p>🕓 <strong>Giờ mở cửa:</strong> 8:00 – 22:00 (Thứ Hai – Chủ Nhật)</p>
+    </div>
+  </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Jade Lotus – Nhà hàng tiệc cưới cao cấp TP.HCM</p>
+  </div>
+</footer>
+
+  <script>
+    function openTab(evt, tabName) {
+      document.querySelectorAll('.tabcontent').forEach(t => t.style.display = 'none');
+      document.querySelectorAll('.menu-tab button').forEach(b => b.classList.remove('active'));
+      document.getElementById(tabName).style.display = 'block';
+      evt.currentTarget.classList.add('active');
+    }
+    function updateQty(btn, change) {
+      const qtySpan = btn.parentElement.querySelector('.qty');
+      let qty = parseInt(qtySpan.textContent) + change;
+      if (qty < 0) qty = 0;
+      qtySpan.textContent = qty;
+      calcPrice();
+    }
+    function calcPrice() {
+      const tables = document.getElementById('tableCount').value || 0;
+      const base = tables * 4900000;
+      let extra = 0;
+      document.querySelectorAll('.dish-item').forEach(d => {
+        const qty = parseInt(d.querySelector('.qty').textContent);
+        const priceText = d.querySelector('.dish-price').textContent;
+        const price = parseInt(priceText.replace(/\D/g,'')) * 1;
+        extra += qty * price;
+      });
+      const total = base + extra;
+      document.getElementById('totalPrice').innerText = 'Tổng tiền: ' + total.toLocaleString() + ' VNĐ';
+      document.getElementById('depositAmount').innerText = (total * 0.2).toLocaleString() + ' VNĐ';
+    }
+    document.getElementById('bookingForm').onsubmit = function(e) {
+      e.preventDefault();
+      alert('ĐÃ NHẬN ĐƠN!\nTư vấn viên sẽ gọi ngay trong 3 phút!\nCảm ơn quý khách đã chọn Jade Lotus!');
+    };
+  </script>
+</body>
+</html>

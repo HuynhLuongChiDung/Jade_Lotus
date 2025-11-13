@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thực đơn - Jade Lotus</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background: #fffaf5;
+    }
+
+    /* Thanh menu chính */
+    .navbar {
+      background-color: #052b19;
+      overflow: visible;
+      display: flex;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      position: relative; /*để dropdown định vị theo thanh này */
+      z-index: 10; /* Giúp menu nằm trên cùng */
+    }
+
+    /* Các mục trong menu */
+    .navbar a, .dropdown .dropbtn {
+      font-size: 18px;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      background: none;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+      background-color: #052b19;
+      border-radius: 10px;
+    }
+
+    /* Nhóm dropdown */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Menu con (ẩn ban đầu) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 200px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      border-radius: 10px;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    /* Các mục trong menu con */
+    .dropdown-content a {
+      color: #333;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      transition: background 0.3s;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f2d0c4;
+    }
+
+    /* Hiện menu con khi hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    /* Hiệu ứng mượt */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="image/Logo-removebg-preview.png" alt="Jade Lotus Logo" class="logo-img">
+        <span>Jade Lotus</span>
+      </a>
+      <nav class="nav-links">
+        <ul>
+      <li><a href="index.html">Trang Chủ</a></li>
+       <!-- Mục Thực đơn có menu con -->
+    <div class="dropdown">
+      <button class="dropbtn">Thực đơn </button>
+      <div class="dropdown-content">
+        <a href="khaivi.html">Khai vị</a>
+        <a href="monchinh_A.html">Món chính Á</a>
+        <a href="monchinh_Au.html">Món chính Âu</a>
+        <a href="trangmieng.html">Tráng miệng</a>
+        <a href="nuocuong.html">Nước uống</a>
+        <a href="ruou.html">Rượu</a>
+      </div>
+    </div>
+      <li><a href="services.html">Dịch vụ</a></li>
+      <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </header>
+
+     <section class="page-header">
+        <h1>Thực đơn Jade Lotus</h1>
+        <p>Nhấn vào món ăn để xem chi tiết nguyên liệu & khẩu phần</p>
+     </section>
+
+
+     <div id="Tráng miệng" class="menu-category">
+  <h2>Tráng miệng</h2>
+  <div class="menu-grid">
+
+
+  <!-- bánh chocolate lava -->
+  <div class="menu-item" onclick="openModal('bánh chocolate lava', '280.000₫', 'image/bánh chocolate lava.jpg', 'Bánh chocolate nóng chảy với lớp vỏ mềm mịn và nhân cacao tan chảy.', 'Chocolate đen, bơ, bột mì, trứng', '1 phần')">
+    <img src="image/bánh chocolate lava.jpg" alt="bánh chocolate lava">
+    <div class="menu-info">
+      <h3>bánh chocolate lava</h3><p>280.000₫</p>
+    </div>
+  </div>
+
+  <!-- bánh dứa -->
+  <div class="menu-item" onclick="openModal('bánh dứa', '140.000₫', 'image/bánh dứa.jpg', 'Bánh quy nhân mứt dứa chua ngọt, mềm và thơm bơ.', 'Bột mì, bơ, mứt dứa', '1 phần')">
+    <img src="image/bánh dứa.jpg" alt="bánh dứa">
+    <div class="menu-info">
+      <h3>bánh dứa</h3><p>140.000₫</p>
+    </div>
+  </div>
+
+  <!-- bánh flan cà phê -->
+  <div class="menu-item" onclick="openModal('bánh flan cà phê', '170.000₫', 'image/bánh flan cà phê.jpg', 'Flan mềm mịn, thơm vị cà phê, phủ caramel đắng nhẹ.', 'Sữa, trứng, caramel, cà phê', '1 phần')">
+    <img src="image/bánh flan cà phê.jpg" alt="bánh flan cà phê">
+    <div class="menu-info">
+      <h3>bánh flan cà phê</h3><p>170.000₫</p>
+    </div>
+  </div>
+
+  <!-- bánh kem trứng caramel -->
+  <div class="menu-item" onclick="openModal('bánh kem trứng caramel', '250.000₫', 'image/bánh kem trứng caramel.jpg', 'Cốt bánh mềm xốp kết hợp kem trứng béo, caramel thơm ngọt.', 'Trứng, sữa, đường, caramel', '1 phần')">
+    <img src="image/bánh kem trứng caramel.jpg" alt="bánh kem trứng caramel">
+    <div class="menu-info">
+      <h3>bánh kem trứng caramel</h3><p>250.000₫</p>
+    </div>
+  </div>
+
+  <!-- Bánh souffle vị cam rượu Grand Marnier -->
+  <div class="menu-item" onclick="openModal('Bánh souffle vị cam rượu Grand Marnier', '280.000₫', 'image/Bánh souffle vị cam rượu Grand Marnier.jpg', 'Soufflé mềm tan, thơm vị cam tươi và rượu Grand Marnier.', 'Trứng, bơ, đường, Grand Marnier', '1 phần')">
+    <img src="image/Bánh souffle vị cam rượu Grand Marnier.jpg" alt="Bánh souffle vị cam rượu Grand Marnier">
+    <div class="menu-info">
+      <h3>Bánh souffle vị cam rượu Grand Marnier</h3><p>280.000₫</p>
+    </div>
+  </div>
+
+  <!-- bánh táo -->
+  <div class="menu-item" onclick="openModal('bánh táo', '250.000₫', 'image/bánh táo.jpg', 'Bánh táo nướng thơm bơ, nhân táo mềm ngọt, phảng phất mùi quế.', 'Táo, bột mì, bơ, quế', '1 phần')">
+    <img src="image/bánh táo.jpg" alt="bánh táo">
+    <div class="menu-info">
+      <h3>bánh táo</h3><p>250.000₫</p>
+    </div>
+  </div>
+
+  <!-- Bingsu matcha -->
+  <div class="menu-item" onclick="openModal('Bingsu matcha', '160.000₫', 'image/Bingsu matcha.jpg', 'Đá bào mịn vị matcha đậm, topping đậu đỏ và kem tươi.', 'Matcha, đá bào, sữa, đậu đỏ', '1 phần')">
+    <img src="image/Bingsu matcha.jpg" alt="Bingsu matcha">
+    <div class="menu-info">
+      <h3>Bingsu matcha</h3><p>160.000₫</p>
+    </div>
+  </div>
+
+  <!-- Chè khúc bạch -->
+  <div class="menu-item" onclick="openModal('Chè khúc bạch', '180.000₫', 'image/CHè khúc bạch.jpg', 'Khúc bạch giòn mát, ăn cùng nhãn và nước đường thanh.', 'Sữa tươi, gelatin, hạnh nhân, nhãn', '1 phần')">
+    <img src="image/CHè khúc bạch.jpg" alt="Chè khúc bạch">
+    <div class="menu-info">
+      <h3>Chè khúc bạch</h3><p>180.000₫</p>
+    </div>
+  </div>
+
+  <!-- Chè long nhãn -->
+  <div class="menu-item" onclick="openModal('Chè long nhãn', '180.000₫', 'image/Chè long nhãn.jpeg', 'Long nhãn giòn ngọt với nước đường thanh mát, topping hạt sen.', 'Long nhãn, hạt sen, đường phèn', '1 phần')">
+    <img src="image/Chè long nhãn.jpeg" alt="Chè long nhãn">
+    <div class="menu-info">
+      <h3>Chè long nhãn</h3><p>180.000₫</p>
+    </div>
+  </div>
+
+  <!-- chè xoài Hồng Kong -->
+  <div class="menu-item" onclick="openModal('chè xoài Hồng Kong', '190.000₫', 'image/chè xoài Hồng Kong.jpg', 'Chè xoài béo nhẹ, xoài tươi ngọt, trân châu dẻo mịn.', 'Xoài, kem tươi, sữa, trân châu', '1 phần')">
+    <img src="image/chè xoài Hồng Kong.jpg" alt="chè xoài Hồng Kong">
+    <div class="menu-info">
+      <h3>chè xoài Hồng Kong</h3><p>190.000₫</p>
+    </div>
+  </div>
+
+  <!-- cheesecake dâu -->
+  <div class="menu-item" onclick="openModal('cheesecake dâu', '260.000₫', 'image/cheesecake dâu.jpg', 'Cheesecake béo mịn, phủ sốt dâu chua ngọt tươi mát.', 'Phô mai kem, dâu, kem tươi', '1 phần')">
+    <img src="image/cheesecake dâu.jpg" alt="cheesecake dâu">
+    <div class="menu-info">
+      <h3>cheesecake dâu</h3><p>260.000₫</p>
+    </div>
+  </div>
+
+  <!-- kem dừa thái lan -->
+  <div class="menu-item" onclick="openModal('kem dừa thái lan', '220.000₫', 'image/kem dừa thái lan.jpg', 'Kem dừa béo mát, thơm mùi lá dứa, topping đậu phộng rang.', 'Nước cốt dừa, sữa, đậu phộng', '1 phần')">
+    <img src="image/kem dừa thái lan.jpg" alt="kem dừa thái lan">
+    <div class="menu-info">
+      <h3>kem dừa thái lan</h3><p>220.000₫</p>
+    </div>
+  </div>
+
+  <!-- kem gelato -->
+  <div class="menu-item" onclick="openModal('kem gelato', '230.000₫', 'image/kem gelato.jpeg', 'Gelato Ý siêu mịn, hương vị tự nhiên, béo nhẹ.', 'Sữa, kem tươi, hương liệu tự nhiên', '1 phần')">
+    <img src="image/kem gelato.jpeg" alt="kem gelato">
+    <div class="menu-info">
+      <h3>kem gelato</h3><p>230.000₫</p>
+    </div>
+  </div>
+
+  <!-- Mochi kem lạnh -->
+  <div class="menu-item" onclick="openModal('Mochi kem lạnh', '200.000₫', 'image/Mochi kem lạnh.jpg', 'Mochi dẻo lạnh nhân kem mềm tan cực hấp dẫn.', 'Bột nếp, kem lạnh, đường', '1 phần')">
+    <img src="image/Mochi kem lạnh.jpg" alt="Mochi kem lạnh">
+    <div class="menu-info">
+      <h3>Mochi kem lạnh</h3><p>200.000₫</p>
+    </div>
+  </div>
+
+  <!-- mousse chocolate -->
+  <div class="menu-item" onclick="openModal('mousse chocolate', '260.000₫', 'image/mousse chocolate.jpg', 'Mousse socola mềm mượt, vị đắng nhẹ và thơm cacao.', 'Chocolate, kem tươi, trứng', '1 phần')">
+    <img src="image/mousse chocolate.jpg" alt="mousse chocolate">
+    <div class="menu-info">
+      <h3>mousse chocolate</h3><p>260.000₫</p>
+    </div>
+  </div>
+
+  <!-- panacotta chanh dây -->
+  <div class="menu-item" onclick="openModal('panacotta chanh dây', '240.000₫', 'image/panacotta chanh dây.jpg', 'Panna cotta mềm mịn, sốt chanh dây chua ngọt hài hòa.', 'Kem tươi, gelatin, chanh dây', '1 phần')">
+    <img src="image/panacotta chanh dây.jpg" alt="panacotta chanh dây">
+    <div class="menu-info">
+      <h3>panacotta chanh dây</h3><p>240.000₫</p>
+    </div>
+  </div>
+
+  <!-- pavlova trái cây -->
+  <div class="menu-item" onclick="openModal('pavlova trái cây', '270.000₫', 'image/pavlova trái cây.jpg', 'Pavlova giòn xốp, phủ kem tươi và trái cây tươi mát.', 'Lòng trắng trứng, kem tươi, trái cây', '1 phần')">
+    <img src="image/pavlova trái cây.jpg" alt="pavlova trái cây">
+    <div class="menu-info">
+      <h3>pavlova trái cây</h3><p>270.000₫</p>
+    </div>
+  </div>
+
+  <!-- tàu hũ trân châu đường đen -->
+  <div class="menu-item" onclick="openModal('tàu hũ trân châu đường đen', '200.000₫', 'image/tàu hũ trân châu đường đen.jpg', 'Tàu hũ mềm mịn kết hợp trân châu dai và đường đen thơm ngọt.', 'Đậu nành, trân châu, đường đen', '1 phần')">
+    <img src="image/tàu hũ trân châu đường đen.jpg" alt="tàu hũ trân châu đường đen">
+    <div class="menu-info">
+      <h3>tàu hũ trân châu đường đen</h3><p>200.000₫</p>
+    </div>
+  </div>
+
+  <!-- tiramisu -->
+  <div class="menu-item" onclick="openModal('tiramisu', '260.000₫', 'image/tiramisu.jpg', 'Tiramisu Ý mềm mịn, vị cà phê và cacao thơm nồng.', 'Mascarpone, cà phê, cacao', '1 phần')">
+    <img src="image/tiramisu.jpg" alt="tiramisu">
+    <div class="menu-info">
+      <h3>tiramisu</h3><p>260.000₫</p>
+    </div>
+  </div>
+
+  <!-- xôi xoài -->
+  <div class="menu-item" onclick="openModal('xôi xoài', '210.000₫', 'image/xôi xoài.jpg', 'Xôi nếp dẻo ăn kèm xoài chín và nước cốt dừa béo.', 'Nếp, xoài chín, nước cốt dừa', '1 phần')">
+    <img src="image/xôi xoài.jpg" alt="xôi xoài">
+    <div class="menu-info">
+      <h3>xôi xoài</h3><p>210.000₫</p>
+    </div>
+  </div>
+  </div>
+</div>
+
+<!-- MODAL CHI TIẾT -->
+  <div id="menuModal" class="menu-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img id="modalImg" src="" alt="">
+        <span class="close-btn" onclick="closeModal()">X</span>
+      </div>
+      <div class="modal-body">
+        <h2 id="modalTitle"></h2>
+        <div class="modal-price" id="modalPrice"></div>
+        <p id="modalDesc"></p>
+        <div class="info-grid">
+          <div class="info-box">
+            <strong>Nguyên liệu chính:</strong><br>
+            <span id="modalIngredients"></span>
+          </div>
+          <div class="info-box">
+            <strong>Khẩu phần khuyến nghị:</strong><br>
+            <span id="modalServing"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </section>
+  <script>
+    function openModal(title, price, img, desc, ingredients, serving) {
+      document.getElementById('modalTitle').innerText = title;
+      document.getElementById('modalPrice').innerText = price;
+      document.getElementById('modalImg').src = img;
+      document.getElementById('modalDesc').innerText = desc;
+      document.getElementById('modalIngredients').innerText = ingredients;
+      document.getElementById('modalServing').innerText = serving;
+      document.getElementById('menuModal').style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      document.getElementById('menuModal').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+    window.onclick = function(e) {
+      if (e.target === document.getElementById('menuModal')) closeModal();
+    }
+  </script>
+
+     <footer class="footer">
+  <div class="footer-container">
+    <!-- Cột 1: Logo & Giới thiệu -->
+    <div class="footer-col">
+      <h3>JADE LOTUS</h3>
+      <p>
+        Nhà hàng tiệc cưới cao cấp với không gian sang trọng, ẩm thực tinh tế và phong cách phục vụ đẳng cấp – 
+        nơi lưu giữ những khoảnh khắc đáng nhớ nhất của bạn.
+      </p>
+    </div>
+
+    <!-- Cột 2: Liên hệ -->
+    <div class="footer-col">
+      <h4>Jade Lotus</h4>
+      <p>📞 (028) 3896 1234 – 0909 123 456</p>
+      <p>✉️ Email: <a href="mailto:contact@jadelotus.vn">contact@jadelotus.vn</a></p>
+      <p>📍 36 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh</p>
+      <p>🕓 <strong>Giờ mở cửa:</strong> 8:00 – 22:00 (Thứ Hai – Chủ Nhật)</p>
+    </div>
+          <div class="footer-col">
+      <h4>Jade Lotus</h4>
+      <p>📞 (028) 3896 1234 – 0909 456 123</p>
+      <p>✉️ Email: <a href="mailto:contact@jadelotus.vn">contact@jadelotus.vn</a></p>
+      <p>📍 45 Phạm Văn Đồng, Thủ Đức, TP.HCM</p>
+      <p>🕓 <strong>Giờ mở cửa:</strong> 8:00 – 22:00 (Thứ Hai – Chủ Nhật)</p>
+    </div>
+  </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Jade Lotus – Nhà hàng tiệc cưới cao cấp TP.HCM</p>
+  </div>
+</footer>    
+</body>
+</html>
